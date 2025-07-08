@@ -35,11 +35,10 @@ public class Main {
         boolean isDeviceOld = deviceYear < 2015;
         if (os == 0 && isDeviceOld) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else {
-                System.out.println("Установите обычную версию приложения для iOS по ссылке");
-            }
-        if (os == 1 && isDeviceOld) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (os == 0 && !isDeviceOld) {
+            System.out.println("Установите обычную версию приложения для iOS по ссылке");
+        } else if (os == 1 && isDeviceOld) {
+        System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите обычную версию приложения для Android по ссылке");
             }
